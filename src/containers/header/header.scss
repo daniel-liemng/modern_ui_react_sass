@@ -1,0 +1,190 @@
+@use '../../variables' as v;
+
+.gpt__header {
+  display: flex;
+}
+
+.gpt__header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-right: 3rem;
+
+  h1 {
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04rem;
+  }
+
+  p {
+    color: v.$color-text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    margin-top: 1.5rem;
+  }
+}
+
+.gpt__header-content__input {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  display: flex;
+
+  input {
+    padding: 0rem 1rem;
+    background: v.$color-footer;
+    color: #fff;
+    flex: 2;
+    width: 100%;
+    min-height: 50px;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 20px;
+    line-height: 27px;
+    border: 2px solid v.$color-footer;
+    outline: none;
+  }
+
+  button {
+    flex: 0.6;
+    width: 100%;
+    min-height: 50px;
+    background: v.$color-button;
+    color: #fff;
+    padding: 0rem 1rem;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.gpt__header-content__people {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+
+  img {
+    width: 182px;
+    height: 38px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 38px;
+    margin-left: 1rem;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 0 1rem;
+  }
+}
+
+.gpt__header-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .gpt__header {
+    flex-direction: column;
+  }
+
+  .gpt__header-content {
+    margin: 0 0 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gpt__header {
+    h1 {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .gpt__header-content__people {
+    flex-direction: column;
+
+    p {
+      margin: 0;
+    }
+
+    input,
+    button {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .gpt__header-content {
+    p {
+      // margin: 0 0 3rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .gpt__header-content {
+    margin: 0;
+
+    h1 {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  .gpt__header-content__input input,
+  .gpt__header-content__input button {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .gpt__header-content__people {
+    flex-direction: column;
+
+    p {
+      margin: 0;
+    }
+
+    input,
+    button {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .gpt__header-content {
+    p {
+      margin: 0 0 3rem;
+    }
+  }
+}
